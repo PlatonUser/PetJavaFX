@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="670.0" style="-fx-background-color: #499DCB;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assigment.prog.pet123.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="670.0" style="-fx-background-color: #499DCB;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assigment.prog.pet123.PetController">
    <children>
       <Pane prefHeight="90.0" prefWidth="670.0" style="-fx-background-color: #ffffff;">
          <children>
@@ -61,6 +61,14 @@
                   <Insets top="31.0" />
                </VBox.margin>
             </Label>
+            <Label text="Find Pet" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="21.0" />
+               </VBox.margin>
+            </Label>
          </children>
       </VBox>
       <VBox layoutX="200.0" layoutY="100.0" prefHeight="138.0" prefWidth="139.0">
@@ -84,9 +92,14 @@
                   <Insets top="17.0" />
                </VBox.margin>
             </Slider>
+            <TextField fx:id="tfFindPet">
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </TextField>
          </children>
       </VBox>
-      <TableView fx:id="tablePets" layoutX="348.0" layoutY="100.0" prefHeight="185.0" prefWidth="307.0">
+      <TableView fx:id="tablePets" layoutX="348.0" layoutY="100.0" prefHeight="214.0" prefWidth="307.0">
         <columns>
           <TableColumn fx:id="clID" prefWidth="22.4000244140625" text="ID" />
           <TableColumn fx:id="clName" prefWidth="82.4000244140625" text="Name" />
@@ -95,17 +108,17 @@
             <TableColumn fx:id="clHunger" prefWidth="69.60002441406249" text="Hunger" />
         </columns>
       </TableView>
-      <Button layoutX="34.0" layoutY="312.0" mnemonicParsing="false" onAction="#savePet" prefHeight="43.0" prefWidth="96.0" text="Save">
+      <Button layoutX="6.0" layoutY="334.0" mnemonicParsing="false" onAction="#savePet" prefHeight="43.0" prefWidth="79.0" text="Save">
          <font>
             <Font name="Comic Sans MS Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="222.0" layoutY="312.0" mnemonicParsing="false" onAction="#cancelInput" prefHeight="43.0" prefWidth="96.0" text="Cancel">
+      <Button layoutX="93.0" layoutY="333.0" mnemonicParsing="false" onAction="#clearInput" prefHeight="43.0" prefWidth="79.0" text="Cancel">
          <font>
             <Font name="Comic Sans MS Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="409.0" layoutY="312.0" mnemonicParsing="false" onAction="#showPets" prefHeight="43.0" prefWidth="202.0" text="Show Pets">
+      <Button layoutX="472.0" layoutY="334.0" mnemonicParsing="false" onAction="#showPets" prefHeight="43.0" prefWidth="96.0" text="Show Pets">
          <font>
             <Font name="Comic Sans MS Bold" size="15.0" />
          </font>
@@ -115,6 +128,24 @@
             <Font name="Comic Sans MS Bold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="622.0" layoutY="437.0" mnemonicParsing="false" onAction="#quitGame" prefHeight="19.0" prefWidth="40.0" text="Quit" />
+      <Button layoutX="576.0" layoutY="333.0" mnemonicParsing="false" onAction="#quitGame" prefHeight="43.0" prefWidth="79.0" text="Quit">
+         <font>
+            <Font name="Comic Sans MS Bold" size="16.0" />
+         </font></Button>
+      <Button layoutX="181.0" layoutY="333.0" mnemonicParsing="false" onAction="#importPet" prefHeight="43.0" prefWidth="79.0" text="Import">
+         <font>
+            <Font name="Comic Sans MS Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="270.0" layoutY="333.0" mnemonicParsing="false" onAction="#exportPet" prefHeight="43.0" prefWidth="79.0" text="Export">
+         <font>
+            <Font name="Comic Sans MS Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="356.0" layoutY="333.0" mnemonicParsing="false" onAction="#deletePet" prefHeight="43.0" prefWidth="108.0" text="Delete Pet">
+         <font>
+            <Font name="Comic Sans MS Bold" size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
